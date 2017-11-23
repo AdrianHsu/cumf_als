@@ -3,6 +3,9 @@
 ## How to run?
 ```
 cd ./data/ml10M/
+pip2 install --user --upgrade pandas
+pip2 install --user --upgrade scipy
+pip2 install --user --upgrade sklearn
 ipython prepare_ml10M_data.py
 cd ../..
 CUDA_VISIBLE_DEVICES=2 ./main 71567 65133 100 9000048 1000006 0.05 1 1 ./data/ml10M/
