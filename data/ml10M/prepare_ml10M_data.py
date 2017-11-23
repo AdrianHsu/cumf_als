@@ -68,13 +68,13 @@ n = 65133
 # In[5]:
 
 user,item,rating, ts = np.loadtxt('ml-10M100K/ratings.dat', delimiter='::', dtype=np.int32,unpack=True)
-print user
-print item
-print rating
-print np.max(user)
-print np.max(item)
-print np.max(rating)
-print user.size
+print(user)
+print(item)
+print(rating)
+print(np.max(user))
+print(np.max(item))
+print(np.max(rating))
+print(user.size)
 
 
 # In[6]:
@@ -102,12 +102,12 @@ R_test_coo.col.tofile('R_test_coo.col.bin')
 
 # In[9]:
 
-print np.max(R_test_coo.data)
-print np.max(R_test_coo.row)
-print np.max(R_test_coo.col)
-print R_test_coo.data
-print R_test_coo.row
-print R_test_coo.col
+print(np.max(R_test_coo.data))
+print(np.max(R_test_coo.row))
+print(np.max(R_test_coo.col))
+print(R_test_coo.data)
+print(R_test_coo.row)
+print(R_test_coo.col)
 
 
 # In[10]:
@@ -115,9 +115,9 @@ print R_test_coo.col
 test_data = np.fromfile('R_test_coo.data.bin',dtype=np.float32)
 test_row = np.fromfile('R_test_coo.row.bin', dtype=np.int32)
 test_col = np.fromfile('R_test_coo.col.bin',dtype=np.int32)
-print test_data[0:10]
-print test_row[0:10]
-print test_col[0:10]
+print(test_data[0:10])
+print(test_row[0:10])
+print(test_col[0:10])
 
 
 # In[11]:
@@ -128,23 +128,22 @@ R_train_coo = coo_matrix((rating_train,(user_item_train[:,0] - 1,user_item_train
 
 # In[12]:
 
-print R_train_coo.data
-print R_train_coo.row
-print R_train_coo.col
-print np.max(R_train_coo.data)
-print np.max(R_train_coo.row)
-print np.max(R_train_coo.col)
+print(R_train_coo.data)
+print(R_train_coo.row)
+print(R_train_coo.col)
+print(np.max(R_train_coo.data))
+print(np.max(R_train_coo.row))
+print(np.max(R_train_coo.col))
 
 
 # In[13]:
 
-print np.unique(user).size
-print np.unique(R_train_coo.row + 1).size
-print np.unique(item).size
-print np.unique(R_train_coo.col + 1).size
-
-print np.unique(R_test_coo.row + 1).size
-print np.unique(R_test_coo.col + 1).size
+print(np.unique(user).size)
+print(np.unique(R_train_coo.row + 1).size)
+print(np.unique(item).size)
+print(np.unique(R_train_coo.col + 1).size)
+print(np.unique(R_test_coo.row + 1).size)
+print(np.unique(R_test_coo.col + 1).size)
 
 
 # In[14]:
@@ -175,9 +174,9 @@ R_train_csc.indptr.tofile('R_train_csc.indptr.bin')
 
 # In[17]:
 
-print R_train_csr.data
-print R_train_csr.indptr
-print R_train_csr.indices
+print(R_train_csr.data)
+print(R_train_csr.indptr)
+print(R_train_csr.indices)
 
 
 # In[ ]:

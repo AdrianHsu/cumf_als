@@ -1,5 +1,14 @@
 # CuMF: CUDA-Accelerated ALS on multiple GPUs.
 
+## How to run?
+```
+cd ./data/ml10M/
+ipython prepare_ml10M_data.py
+cd ../..
+CUDA_VISIBLE_DEVICES=2 ./main 71567 65133 100 9000048 1000006 0.05 1 1 ./data/ml10M/
+
+```
+
 ## What is matrix factorization?
 
 Matrix factorization (MF) factors a sparse rating matrix R (m by n, with N_z non-zero elements) into a m-by-f and a f-by-n matrices, as shown below.
